@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'icons';
+  src: url('../font/icons.eot?57900141');
+  src: url('../font/icons.eot?57900141#iefix') format('embedded-opentype'),
+       url('../font/icons.woff?57900141') format('woff'),
+       url('../font/icons.ttf?57900141') format('truetype'),
+       url('../font/icons.svg?57900141#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.row {
+  position: relative;
+  font-size: 0;
+}
+
+.row > div {
+  display: inline-block;
+  padding: 0 5px;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.row > div:first-child { padding-left: 0; }
+.row > div:last-child { padding-right: 0; }
+
+.col-1 { width: 50%; }
+.col-2 { width: 100%; }
+
+.to-left {
+  text-align: left;
+}
+
+.mp-reset(){
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Firefox dotted outline remove
+button::-moz-focus-inner {
+  border: 0;
+}

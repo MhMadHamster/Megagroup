@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Оформление письма</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/require.js" data-main="js/main"></script>
+</head>
+<body>
+  <div class="main">
+    <div class="container clearfix">
+      <h1 class="to-left">Оформление письма</h1>
+      <div class="letter-tabs">
+
+        <input type="radio" name="letter" id="letter-tab-1" class="letter-tab" checked>
+        <label for="letter-tab-1" class="letter-tab-text caption">Менеджеру</label>
+        <input type="radio" name="letter" id="letter-tab-2" class="letter-tab">
+        <label for="letter-tab-2" class="letter-tab-text caption">Директору</label>
+
+        <div class="letter-tab-content">
+          <form name="letter-form" class="letter-form"></form>
+          <div class="well">
+            <div class="row">
+              <div class="col-1">
+
+                <div class="letter-theme to-left">
+                  <span class="caption">Тема письма:</span>
+                  <div class="theme-select">
+                    <select name="theme-select" for="letter-form">
+                      <option value="1">Тема 1</option>
+                      <option value="2">Тема 2</option>
+                      <option value="3">Тема 3</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- /.letter-theme -->
+
+                <div class="contacts to-left">
+                  <span class="caption">Введите ваши контактные данные</span>
+                  <input type="text" name="FIO" class="letter-input" for="letter-form" placeholder="Ф.И.О">
+                  <div class="contacts-address">
+                    <div class="row">
+                      <div class="col-1">
+                        <input type="text" name="email" class="letter-input" for="letter-form" placeholder="Контактный e-mail">
+                      </div>
+                      <div class="col-1">
+                        <input type="text" name="phone" class="letter-input" for="letter-form" placeholder="Телефон">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.contacts -->
+
+              </div>
+              <!-- /.col-1 -->
+
+              <div class="col-1">
+                <textarea name="appeal" class="appeal letter-input" rows="5" for="letter-form" placeholder="Текст обращения"></textarea>
+                <div class="letter-options">
+                  <input type="checkbox" name="hot" class="letter-checkbox" for="letter-form" id="letter-checkbox-1">
+                  <label for="letter-checkbox-1">Срочно</label>
+                  <input type="checkbox" name="callback" class="letter-checkbox" for="letter-form" id="letter-checkbox-2">
+                  <label for="letter-checkbox-2">Позвонить после обработки</label>
+                </div>
+                <button type="submit" class="btn to-left" for="letter-form" >Отправить</button>
+              </div>
+              <!-- /.col-1 -->
+
+            </div>
+          </div>
+          <div class="well">
+            <span>Something</span>
+          </div>
+          
+        </div>
+        <!-- /.letter-tab-content -->
+
+      </div>
+    </div>
+    <!-- /.container -->
+  </div>
+</body>
+</html>

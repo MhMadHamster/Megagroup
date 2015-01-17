@@ -1,0 +1,24 @@
+.letter-input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  outline: none;
+  border: 0;
+  padding: 5px 9px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: @input-font-size;
+  line-height: @input-lh;
+  color: @input-text-color;
+  border-radius: 7px;
+  box-shadow: inset 0 0 3px fade(@shadow-color, 75%);
+}
+
+::-webkit-input-placeholder { color: @placeholder-color; }
+::-moz-placeholder          { color: @placeholder-color; }/* Firefox 19+ */
+:-moz-placeholder           { color: @placeholder-color; }/* Firefox 18- */
+:-ms-input-placeholder      { color: @placeholder-color; }
+
+:focus::-webkit-input-placeholder { color: transparent }
+:focus::-moz-placeholder          { color: transparent }
+:focus:-moz-placeholder           { color: transparent }
+:focus:-ms-input-placeholder      { color: transparent }
