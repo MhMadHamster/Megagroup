@@ -51,19 +51,3 @@ gulp.task('watch', function() {
         gulp.run('js');
     });
 });
-
-// gulp.task('build', function() {
-
-//     // css
-//     gulp.src('./less/style.less')
-//         .pipe(less()) // собираем less
-//         .pipe(myth()) // добавляем префиксы - http://www.myth.io/
-//         .pipe(csso()) // минимизируем css
-//         .pipe(gulp.dest('./css/')) // записываем css
-
-//     // js
-//     gulp.src('./assets/js/*.js')
-//         .pipe(concat('index.js'))
-//         .pipe(uglify())
-//         .pipe(gulp.dest('./build/js'));
-// });

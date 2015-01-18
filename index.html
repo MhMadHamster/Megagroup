@@ -1,10 +1,24 @@
 <!DOCTYPE html>
+<!--[if IE 8]><html class="ie8" lang="ru"><![endif]-->
+
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>Оформление письма</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/require.js" data-main="js/main"></script>
+  <script src="js/libs/jquery-1.11.2.min.js"></script>
+  <!--[if lt IE 9]>
+  <script src="js/libs/MooTools-Core-1.5.1.js"></script>
+  <script src="js/libs/selectivizr-min.js"></script>
+  <script src="js/libs/icheck.min.js"></script>
+  <script src="js/libs/jquery.backgroundSize.js"></script>
+  <script src="js/lte-ie8.js"></script>
+  <![endif]-->
+  <!--[if lte IE 9]>
+  <script src="js/libs/jquery.placeholder.min.js"></script>
+  <script src="js/lte-ie9.js"></script>
+  <![endif]-->
 </head>
 <body>
   <div class="main">
@@ -57,10 +71,14 @@
               <div class="col-1">
                 <textarea name="appeal" class="appeal letter-input" rows="5" for="letter-form" placeholder="Текст обращения"></textarea>
                 <div class="letter-options">
-                  <input type="checkbox" name="hot" class="letter-checkbox" for="letter-form" id="letter-checkbox-1">
-                  <label for="letter-checkbox-1">Срочно</label>
-                  <input type="checkbox" name="callback" class="letter-checkbox" for="letter-form" id="letter-checkbox-2">
-                  <label for="letter-checkbox-2">Позвонить после обработки</label>
+                  <div class="checkbox-wrapper">
+                    <input type="checkbox" name="hot" class="letter-checkbox" for="letter-form" id="letter-checkbox-1">
+                    <label for="letter-checkbox-1">Срочно</label>
+                  </div>
+                  <div class="checkbox-wrapper">
+                    <input type="checkbox" name="callback" class="letter-checkbox" for="letter-form" id="letter-checkbox-2">
+                    <label for="letter-checkbox-2">Позвонить после обработки</label>
+                  </div>
                 </div>
                 <button type="submit" class="btn to-left" for="letter-form" >Отправить</button>
               </div>
@@ -79,5 +97,6 @@
     </div>
     <!-- /.container -->
   </div>
+
 </body>
 </html>

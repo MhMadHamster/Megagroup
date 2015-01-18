@@ -10,7 +10,12 @@
   line-height: @input-lh;
   color: @input-text-color;
   border-radius: 7px;
+  border-collapse: separate;
   box-shadow: inset 0 0 3px fade(@shadow-color, 75%);
+}
+
+.ie8 .letter-input {
+  border: 1px solid @ie-border-color;
 }
 
 ::-webkit-input-placeholder { color: @placeholder-color; }
