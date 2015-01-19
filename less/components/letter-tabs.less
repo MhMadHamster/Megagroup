@@ -17,16 +17,16 @@
       }
 
       & ~ .letter-tab-content > .well {
-        visibility: hidden;
+        display: none;
       }
     }
 
     &:nth-of-type(1):checked ~ .letter-tab-content > .well:nth-of-type(1) {
-      visibility: visible;
+      display: block;
     }
 
     &:nth-of-type(2):checked ~ .letter-tab-content > .well:nth-of-type(2) {
-      visibility: visible;
+      display: block;
     }
   }
 
@@ -52,6 +52,47 @@
       margin-left: (-@left-padding);
       background-color: @tab-content-bg-color;
       border-radius: 7px;
+    }
+  }
+}
+
+// IE 8
+.ie8 .letter-tabs {
+
+  & .letter-tab {
+
+    & + .letter-tab-text {
+      background-color: @tab-bg-color;
+      color: @tab-color;
+
+      &:hover {
+        color: @tab-active-color;
+        cursor: pointer;
+      }
+    }
+
+    &.checked {
+
+      & + .letter-tab-text:hover {
+        cursor: default;
+      }
+      
+      & + .letter-tab-text {
+        background-color: @tab-active-bg-color;
+        color: @tab-active-color;
+      }
+
+      & ~ div.letter-tab-content > div.well:nth-of-type(n) {
+        display: none;
+      }
+    }
+
+    &:nth-of-type(1).checked ~ .letter-tab-content > .well:nth-of-type(1) {
+      display: block;
+    }
+
+    &:nth-of-type(2).checked ~ .letter-tab-content > .well:nth-of-type(2) {
+      display: block;
     }
   }
 }
